@@ -11,3 +11,7 @@ def copy_file(command: str) -> None:
                           f"copied to {destination_file}.")
             except FileNotFoundError:
                 print(f"File {source_file} was not found in the directory.")
+            except PermissionError:
+                print(f"Permission denied while accessing '{source_file}' or '{destination_file}'.")
+            except IOError as e:
+                print(f"An I/O error occurred: {e}")
