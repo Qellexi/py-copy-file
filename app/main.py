@@ -7,6 +7,7 @@ def copy_file(command: str) -> None:
                 with (open(source_file, "r") as file_in,
                       open(destination_file, "w") as file_out):
                     file_out.write(file_in.read())
-                    print(f"File {source_file} was successfully copied to {destination_file}.")
+                    print(f"File {source_file} was successfully "
+                          f"copied to {destination_file}.")
             except FileNotFoundError:
                 print(f"File {source_file} was not found in the directory.")
